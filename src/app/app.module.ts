@@ -5,18 +5,17 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpInterceptorService } from './services/interceptor/http-interceptor.service';
 
 import { AppComponent } from './app.component';
-import { IonSearchbarComponent } from './components/ion-searchbar/ion-searchbar.component';
-import { IonListComponent } from './components/ion-list/ion-list.component';
+
+import { SharedModule } from './components/shared.module';
 
 @NgModule({
 	declarations: [
-		AppComponent,
-		IonSearchbarComponent,
-		IonListComponent
+		AppComponent
 	],
 	imports: [
 		BrowserModule,
-		HttpClientModule
+		HttpClientModule,
+		SharedModule
 	],
 	providers: [
 		{ provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true }

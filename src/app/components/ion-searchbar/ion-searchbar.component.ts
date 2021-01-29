@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
 	selector: 'ion-searchbar',
@@ -7,8 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IonSearchbarComponent implements OnInit {
 
-	constructor() { }
+	@Output() value: EventEmitter<string> = new EventEmitter<string>();
 
-	ngOnInit(): void { }
+    @Input() placeholder: string = 'Search';
+
+    constructor() {	}
+	
+	public ngOnInit(): void {}
+
+	public search(input: string): void {
+		if (input.replace(/ /g, '') == '') {
+			input = null;
+		}
+
+		this.value.next(input);
+	}
 
 }
