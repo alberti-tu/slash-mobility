@@ -2,6 +2,7 @@
     background-color: #e4e4e4;
 
     .song-list {
+        min-height: calc(100vh - 104px);
         padding: 16px;
     }
 
