@@ -1,16 +1,22 @@
 .ion-list-container {
-    
-    background: #e4e4e4;
+    background-color: #e4e4e4;
 
     .song-list {
-        height: 100%;    
+        padding: 16px;
     }
 
     .song {
+        margin-bottom: 16px;
+
         background: #ffffff;
         border-radius: 4px;
 
-        .header {}
+        .header {
+            img { 
+                height: 100%;;
+                width: 100%;
+            }
+        }
 
         .content {
             p {
@@ -28,6 +34,24 @@
             img {
                 cursor: pointer;
             }
+        }
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+
+    @media screen and (min-width: 530px) {
+        .song-list {
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            justify-content: center;
+        }
+
+        .song {
+            width: 300px;
+            margin: 16px;
         }
     }
 }
