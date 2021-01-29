@@ -7,7 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-	public searchValue: string;
+	public placeholder = 'Search';
+	public delay = 500;
+
+	public search: string;
 	public likes: number;
 
 	constructor() { }
