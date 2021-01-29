@@ -6,11 +6,13 @@ import { HttpInterceptorService } from './services/interceptor/http-interceptor.
 
 import { AppComponent } from './app.component';
 import { IonSearchbarComponent } from './components/ion-searchbar/ion-searchbar.component';
+import { IonListComponent } from './components/ion-list/ion-list.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		IonSearchbarComponent
+		IonSearchbarComponent,
+		IonListComponent
 	],
 	imports: [
 		BrowserModule,
