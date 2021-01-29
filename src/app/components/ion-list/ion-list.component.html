@@ -1,8 +1,20 @@
 <div class="ion-list-container">
-    <div *ngFor="let item of songs" class="songs">
-        <img src="{{ item.artworkUrl100 }}">
-        <p>{{ item.trackName }}</p>
-        <p>{{ item.collectionName }}</p>
-        <img src="assets/icons/{{ isFavourite(item.trackId) }}.svg">
+
+    <div class="song-list">
+        <div *ngFor="let item of songs" class="song">
+            <div class="header">
+                <img src="{{ item.artworkUrl100 }}">
+            </div>
+    
+            <div class="content">
+                <p>{{ item.trackName }}</p>
+                <p>{{ item.collectionName }}</p>
+            </div>
+    
+            <div class="footer">
+                <img src="assets/icons/{{ isFavourite(item.trackId) }}.svg" (click)="toggleLike(item.trackId)">
+            </div>
+        </div>
     </div>
+
 </div>

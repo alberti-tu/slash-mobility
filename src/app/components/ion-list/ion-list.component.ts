@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
 import { HttpService } from 'src/app/services/http/http.service';
 import { Song } from 'src/app/models/interfaces';
 
@@ -9,6 +9,8 @@ import { Song } from 'src/app/models/interfaces';
 })
 export class IonListComponent implements OnInit, OnChanges {
 
+	@Output() countLikes: EventEmitter<number> = new EventEmitter<number>();
+	
 	@Input() search: string;
 
 	public songs: Song[] = [];
@@ -30,7 +32,19 @@ export class IonListComponent implements OnInit, OnChanges {
 		}
 	}
 
+	public toggleLike(trackId: number): void {
+		const song = localStorage.getItem(trackId.toString());
+
+		if (song == null) {
+			localStorage.setItem(trackId.toString(), new Date().getTime().toString());
+		} else {
+			localStorage.removeItem(trackId.toString());
+		}
+
+		this.countLikes.next(localStorage.length);
+	}
+
 	public isFavourite(trackId: number): string {
-		return false ? 'heart' : 'heart-outline';
+		return localStorage.getItem(trackId.toString()) != null ? 'heart' : 'heart-outline';
 	}
 }

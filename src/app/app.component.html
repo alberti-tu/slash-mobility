@@ -1,2 +1,2 @@
-<ion-searchbar (value)="searchValue = $event"></ion-searchbar>
-<ion-list [search]="searchValue"></ion-list>
+<ion-searchbar [badge]="likes" (value)="searchValue = $event"></ion-searchbar>
+<ion-list [search]="searchValue" (countLikes)="likes = $event"></ion-list>

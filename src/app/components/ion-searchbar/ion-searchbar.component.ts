@@ -9,11 +9,14 @@ export class IonSearchbarComponent implements OnInit {
 
 	@Output() value: EventEmitter<string> = new EventEmitter<string>();
 
-    @Input() placeholder: string = 'Search';
+	@Input() placeholder: string = 'Search';
+	@Input() badge: number = 0;
 
     constructor() {	}
 	
-	public ngOnInit(): void {}
+	public ngOnInit(): void {
+		this.badge = localStorage.length;
+	}
 
 	public search(input: string): void {
 		if (input.replace(/ /g, '') == '') {

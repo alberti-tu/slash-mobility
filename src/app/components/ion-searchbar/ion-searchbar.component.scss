@@ -2,11 +2,16 @@
     background: #00afc8;
     padding: 1em 2em;
 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
     .input-group {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
 
+        width: -webkit-fill-available;
         background: #00829b;
         
         input {
@@ -30,4 +35,21 @@
         };
     }
 
+    .likes-group {
+        position: relative;
+        margin: 0px 16px;
+
+        img {
+            height: 75%;
+        }
+
+        div {
+            position: absolute;
+            transform: translate(50%, -80%);
+            
+            border-radius: 50%;
+            background: #e6e6e6;
+            padding: 6px 8px;
+        }
+    }
 }

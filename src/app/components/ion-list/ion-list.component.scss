@@ -1,11 +1,33 @@
 .ion-list-container {
+    
+    background: #e4e4e4;
 
-    background: #b4b4b4;
+    .song-list {
+        height: 100%;    
+    }
 
     .song {
+        background: #ffffff;
+        border-radius: 4px;
+
         .header {}
-        .title {}
-        .album {}
-        .like {}
+
+        .content {
+            p {
+                margin: 16px;
+
+                &:first-child { font-size: 1.125em }
+                &:last-child { font-size: 0.75em }
+            }
+        }
+
+        .footer {
+            text-align: right;
+            padding: 16px;
+
+            img {
+                cursor: pointer;
+            }
+        }
     }
 }
