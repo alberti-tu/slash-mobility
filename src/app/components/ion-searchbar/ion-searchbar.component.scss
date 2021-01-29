@@ -1,5 +1,5 @@
 .ion-searchbar-container {
-    background: #00afc8;
+    background: #59b1cc;
     padding: 1em 2em;
     
     display: flex;
@@ -17,7 +17,7 @@
         justify-content: space-between;
 
         width: -webkit-fill-available;
-        background: #00829b;
+        background: #3a97c5;
         
         input {
             background: transparent;
@@ -43,18 +43,29 @@
     .likes-group {
         position: relative;
         margin: 0px 16px;
+        
+        height: 40px;
+        width: 40px;
 
         img {
-            height: 75%;
+            position: relative;
+            height: 100%;
+            top: 10%;
         }
 
         div {
             position: absolute;
-            transform: translate(50%, -80%);
+            transform: translate(125%,-145%);
             
             border-radius: 50%;
             background: #e6e6e6;
             padding: 6px 8px;
+        }
+    }
+
+    @media screen and (min-width: 530px) {
+        .input-group {
+            width: 500px;
         }
     }
 }
