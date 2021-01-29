@@ -1,0 +1,27 @@
+.ion-searchbar-container {
+    background: #00afc8;
+    padding: 1em 2em;
+
+    .input-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        background: #00829b;
+
+        input {
+            background: transparent;
+            color: #ffffff;
+            font-size: 1em;
+            padding: 0em;
+            border: none;
+            width: 100%;
+    
+            &::placeholder {
+                color: #ffffff;
+                font-size: 1em;
+            }
+        }
+    }
+
+}

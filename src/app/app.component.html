@@ -1,2 +1,2 @@
-<ion-searchbar [placeholder]="'test'" (value)="getValue($event)"></ion-searchbar>
+<ion-searchbar (value)="searchValue = $event"></ion-searchbar>
 <ion-list [search]="searchValue"></ion-list>

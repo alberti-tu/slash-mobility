@@ -3,7 +3,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 @Component({
 	selector: 'ion-searchbar',
 	templateUrl: './ion-searchbar.component.html',
-	styleUrls: ['./ion-searchbar.component.css']
+	styleUrls: ['./ion-searchbar.component.scss']
 })
 export class IonSearchbarComponent implements OnInit {
 

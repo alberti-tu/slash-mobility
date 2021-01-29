@@ -4,7 +4,7 @@ import { HttpService } from 'src/app/services/http/http.service';
 @Component({
 	selector: 'ion-list',
 	templateUrl: './ion-list.component.html',
-	styleUrls: ['./ion-list.component.css']
+	styleUrls: ['./ion-list.component.scss']
 })
 export class IonListComponent implements OnInit, OnChanges {
 
