@@ -1,5 +1,6 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/services/http/http.service';
+import { Song } from 'src/app/models/interfaces';
 
 @Component({
 	selector: 'ion-list',
@@ -10,7 +11,8 @@ export class IonListComponent implements OnInit, OnChanges {
 
 	@Input() search: string;
 
-	public albums: any[] = [];
+	public songs: Song[] = [];
+	public count: number = 0;
 
 	constructor(private _http: HttpService) { }
 
@@ -18,10 +20,17 @@ export class IonListComponent implements OnInit, OnChanges {
 
 	public ngOnChanges(): void {
 		if (this.search == null) {
-			this.albums = [];
+			this.songs = [];
+			this.count = 0;
 		} else {
-			this._http.searchAlbum(this.search).subscribe(data => this.albums = data);
+			this._http.searchSongs(this.search).subscribe(data => {
+				this.songs = data.results;
+				this.count = data.resultCount;
+			});
 		}
 	}
 
+	public isFavourite(trackId: number): string {
+		return false ? 'heart' : 'heart-outline';
+	}
 }
