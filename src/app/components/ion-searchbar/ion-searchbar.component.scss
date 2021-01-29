@@ -8,12 +8,13 @@
         justify-content: space-between;
 
         background: #00829b;
+        
 
         input {
             background: transparent;
+            padding: 0.5em 1em;
             color: #ffffff;
             font-size: 1em;
-            padding: 0em;
             border: none;
             width: 100%;
     
@@ -22,6 +23,12 @@
                 font-size: 1em;
             }
         }
+
+        img {
+            padding: 0.5em 1em;
+            color: #ffffff;
+            font-size: 1em;
+        };
     }
 
 }
