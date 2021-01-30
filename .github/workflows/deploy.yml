@@ -31,4 +31,4 @@ jobs:
         BASE_BRANCH: master
         BRANCH: production
         FOLDER: dist
-        BUILD_SCRIPT: npm install && npm run build -- --prod
+        BUILD_SCRIPT: npm install && npm run build --
