@@ -1,4 +1,4 @@
-name: Deploy GitHub Page
+name: Deploy on GitHub Pages
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  Angular:
+  Build:
     runs-on: ubuntu-latest
     
     steps:
